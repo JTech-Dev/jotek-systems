@@ -102,7 +102,12 @@ export const projects: Project[] = [
         },
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/images/projects/macroit/screenshots/dashboard.png",
+      "/images/projects/macroit/screenshots/ai-scan.png",
+      "/images/projects/macroit/screenshots/health.png",
+      "/images/projects/macroit/screenshots/apple-watch-dashboard.png",
+    ],
   },
 
   {
@@ -165,7 +170,15 @@ export const projects: Project[] = [
         },
       },
     ],
-    screenshots: [],
+    screenshots: [
+      "/images/projects/teccio/screenshots/teccio-dashboard.png",
+      "/images/projects/teccio/screenshots/teccio-create-post.png",
+      "/images/projects/teccio/screenshots/teccio-generate-my-week.png",
+      "/images/projects/teccio/screenshots/teccio-generate-image.png",
+      "/images/projects/teccio/screenshots/teccio-posts.png",
+      "/images/projects/teccio/screenshots/teccio-analytics.png",
+      "/images/projects/teccio/screenshots/teccio-website-analytics.png",
+    ],
   },
 
   {

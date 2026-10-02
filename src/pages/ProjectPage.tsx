@@ -40,7 +40,13 @@ export function ProjectPage() {
 
   return (
     <main>
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section
+        className={`px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 ${
+          isDark
+            ? "bg-gradient-to-b from-slate-900/70 to-slate-950"
+            : "bg-gradient-to-b from-white to-slate-100/80"
+        }`}
+      >
         <div className="mx-auto max-w-7xl">
           <Link
             to="/#projects"
@@ -91,7 +97,7 @@ export function ProjectPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-32">
+      <section className="px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24 lg:px-8 lg:pt-14 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <ProjectCarousel
             projectName={project.name}
