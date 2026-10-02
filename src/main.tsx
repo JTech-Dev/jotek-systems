@@ -8,6 +8,13 @@ import App from "./App.tsx";
 import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
+const redirectPath = sessionStorage.getItem("jotek-redirect");
+
+if (redirectPath) {
+  sessionStorage.removeItem("jotek-redirect");
+  window.history.replaceState(null, "", redirectPath);
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

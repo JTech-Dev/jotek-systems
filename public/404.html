@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jotek Systems</title>
+
+    <script>
+      const path =
+        window.location.pathname +
+        window.location.search +
+        window.location.hash;
+
+      sessionStorage.setItem("jotek-redirect", path);
+
+      window.location.replace("/");
+    </script>
+  </head>
+
+  <body></body>
+</html>

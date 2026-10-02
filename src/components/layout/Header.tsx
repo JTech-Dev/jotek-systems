@@ -61,8 +61,8 @@ export function Header() {
             {t.nav.projects}
           </a>
 
-          <a
-            href="/#about"
+          <Link
+            to="/about"
             className={`text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:text-white"
@@ -70,7 +70,7 @@ export function Header() {
             }`}
           >
             {t.nav.about}
-          </a>
+          </Link>
 
           <a
             href="/#contact"
@@ -155,8 +155,8 @@ export function Header() {
             {t.nav.projects}
           </a>
 
-          <a
-            href="/#about"
+          <Link
+            to="/about"
             onClick={closeMenu}
             className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               isDark
@@ -165,7 +165,7 @@ export function Header() {
             }`}
           >
             {t.nav.about}
-          </a>
+          </Link>
 
           <a
             href="/#contact"
