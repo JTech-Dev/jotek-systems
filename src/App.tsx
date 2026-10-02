@@ -1,0 +1,37 @@
+import { Routes, Route } from "react-router-dom";
+
+import { HomePage } from "./pages/HomePage";
+import { ProjectPage } from "./pages/ProjectPage";
+import { useTheme } from "./context/ThemeContext";
+
+import { Header } from "./components/layout/Header";
+import { Footer } from "./components/layout/Footer";
+import { ScrollToTop } from "./components/ui/ScrollToTop";
+import { RouteScrollManager } from "./components/ui/RouteScrollManager";
+
+function App() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
+  return (
+    <div
+      id="top"
+      className={`min-h-screen transition-colors duration-300 ${
+        isDark ? "bg-slate-950 text-white" : "bg-slate-50 text-slate-950"
+      }`}
+    >
+      <RouteScrollManager />
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projects/:projectId" element={<ProjectPage />} />
+      </Routes>
+
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+}
+
+export default App;
