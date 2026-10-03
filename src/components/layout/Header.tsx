@@ -41,6 +41,10 @@ export function Header() {
             aria-hidden="true"
           />
 
+          <span className="text-sm font-semibold text-blue-500 sm:hidden dark:text-blue-400">
+            {siteConfig.companyName}
+          </span>
+
           <span className="hidden text-sm font-bold uppercase tracking-[0.22em] text-blue-500 sm:inline dark:text-blue-400">
             {siteConfig.companyName}
           </span>
