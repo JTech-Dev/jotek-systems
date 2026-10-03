@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import { ArrowRight, ExternalLink } from "lucide-react";
+import { ProjectStatusBadge } from "../projects/ProjectStatusBadge";
 import { projects } from "../../data/projects";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
@@ -47,15 +49,19 @@ export function ProjectsSection() {
               <div className="h-16 w-16 overflow-hidden rounded-2xl">
                 <img
                   src={project.logo}
-                  alt={`${project.name} logo`}
+                  alt=""
                   className="h-full w-full object-contain"
                 />
               </div>
 
               <div className="mt-6 sm:mt-8">
-                <h3 className="text-2xl font-bold tracking-tight">
-                  {project.name}
-                </h3>
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-2xl font-bold tracking-tight">
+                    {project.name}
+                  </h3>
+
+                  <ProjectStatusBadge status={project.status} />
+                </div>
 
                 <p className="mt-3 font-medium text-blue-500 dark:text-blue-400">
                   {project.shortDescription[language]}
@@ -73,22 +79,24 @@ export function ProjectsSection() {
               <div className="mt-auto flex flex-col items-start gap-3 pt-7 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 sm:pt-8">
                 <Link
                   to={`/projects/${project.id}`}
-                  className={`text-sm font-semibold transition-colors ${
+                  className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
                     isDark
                       ? "text-slate-200 hover:text-white"
                       : "text-slate-700 hover:text-slate-950"
                   }`}
                 >
-                  {t.projects.viewProject} →
+                  {t.projects.viewProject}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
 
                 <a
                   href={project.website}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm font-semibold text-blue-500 transition-colors hover:text-blue-400"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-500 transition-colors hover:text-blue-400"
                 >
-                  {t.projects.visitWebsite} ↗
+                  {t.projects.visitWebsite}
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
             </article>

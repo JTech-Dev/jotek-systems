@@ -23,8 +23,8 @@ export function Header() {
     <header
       className={`sticky top-0 z-50 border-b backdrop-blur-xl transition-colors duration-300 ${
         isDark
-          ? "border-slate-800/80 bg-slate-950/80"
-          : "border-slate-200/80 bg-slate-50/80"
+          ? "border-slate-700/70 bg-slate-900/95 shadow-md shadow-black/20"
+          : "border-slate-300/80 bg-slate-200/90 shadow-sm shadow-slate-900/10"
       }`}
     >
       <div className="mx-auto flex h-[88px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">

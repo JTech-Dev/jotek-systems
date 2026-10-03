@@ -8,9 +8,12 @@ export type ProjectFeature = {
   description: LocalizedText;
 };
 
+export type ProjectStatus = "available" | "beta" | "development" | "comingSoon";
+
 export type Project = {
   id: string;
   name: string;
+  status: ProjectStatus;
   shortDescription: LocalizedText;
   description: LocalizedText;
   about: LocalizedText;
@@ -25,6 +28,7 @@ export const projects: Project[] = [
   {
     id: "macroit",
     name: "MacroIt",
+    status: "available",
     shortDescription: {
       en: "Track macros. Eat smarter.",
       es: "Registra tus macros. Come más inteligente.",
@@ -113,6 +117,7 @@ export const projects: Project[] = [
   {
     id: "teccio",
     name: "Teccio",
+    status: "available",
     shortDescription: {
       en: "Plan once. Publish all week.",
       es: "Planifica una vez. Publica toda la semana.",
@@ -184,6 +189,7 @@ export const projects: Project[] = [
   {
     id: "dinage",
     name: "Dinage",
+    status: "development",
     shortDescription: {
       en: "A new Jotek Systems project in development.",
       es: "Un nuevo proyecto de Jotek Systems en desarrollo.",

@@ -25,6 +25,13 @@ export const en = {
     comingSoon: "Coming soon",
   },
 
+  projectStatus: {
+    available: "Available",
+    beta: "Beta",
+    development: "In development",
+    comingSoon: "Coming soon",
+  },
+
   about: {
     eyebrow: "About us",
     title: "Thoughtful software. Focused experiences.",
@@ -33,6 +40,19 @@ export const en = {
     founderRole: "Founder & Software Developer",
     founderDescription:
       "Building focused digital products across mobile, web, SaaS, and new software experiences.",
+  },
+
+  skills: {
+    eyebrow: "Skills & technologies",
+    title: "Tools for building useful products.",
+    description:
+      "A focused set of technologies used to design, build, integrate, and evolve products across mobile and web.",
+    groups: {
+      mobile: "Mobile",
+      web: "Web & SaaS",
+      backend: "Backend & Cloud",
+      ai: "AI & Integrations",
+    },
   },
 
   contact: {
@@ -126,6 +146,14 @@ export const en = {
     openFullscreen: "Open {name} screenshot {number} in full screen",
     navigation: "Screenshot navigation",
     showScreenshot: "Show screenshot {number}",
+  },
+
+  notFound: {
+    title: "Page not found.",
+    description:
+      "The page you’re looking for doesn’t exist or may have been moved.",
+    home: "Back to home",
+    goBack: "Go back",
   },
 
   footer: {

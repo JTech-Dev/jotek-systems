@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
+import { useTheme } from "./context/ThemeContext";
+
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import { ProjectPage } from "./pages/ProjectPage";
-import { useTheme } from "./context/ThemeContext";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
@@ -30,6 +32,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects/:projectId" element={<ProjectPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       <Footer />

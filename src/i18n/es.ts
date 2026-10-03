@@ -25,6 +25,13 @@ export const es = {
     comingSoon: "Próximamente",
   },
 
+  projectStatus: {
+    available: "Disponible",
+    beta: "Beta",
+    development: "En desarrollo",
+    comingSoon: "Próximamente",
+  },
+
   about: {
     eyebrow: "Sobre nosotros",
     title: "Software bien pensado. Experiencias enfocadas.",
@@ -33,6 +40,19 @@ export const es = {
     founderRole: "Fundador y Desarrollador de Software",
     founderDescription:
       "Creando productos digitales enfocados en aplicaciones móviles, web, SaaS y nuevas experiencias de software.",
+  },
+
+  skills: {
+    eyebrow: "Habilidades y tecnologías",
+    title: "Herramientas para crear productos útiles.",
+    description:
+      "Un conjunto enfocado de tecnologías utilizadas para diseñar, desarrollar, integrar y evolucionar productos móviles y web.",
+    groups: {
+      mobile: "Móvil",
+      web: "Web y SaaS",
+      backend: "Backend y Cloud",
+      ai: "IA e Integraciones",
+    },
   },
 
   aboutPage: {
@@ -127,6 +147,13 @@ export const es = {
     openFullscreen: "Abrir captura {number} de {name} en pantalla completa",
     navigation: "Navegación de capturas",
     showScreenshot: "Mostrar captura {number}",
+  },
+
+  notFound: {
+    title: "Página no encontrada.",
+    description: "La página que buscas no existe o puede haber sido movida.",
+    home: "Volver al inicio",
+    goBack: "Volver atrás",
   },
 
   footer: {
