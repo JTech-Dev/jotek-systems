@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FolderKanban, Mail, Menu, UserRound, X } from "lucide-react";
 
 import { LanguageToggle } from "../ui/LanguageToggle";
 import { ThemeToggle } from "../ui/ThemeToggle";
@@ -56,34 +57,37 @@ export function Header() {
         >
           <a
             href="/#projects"
-            className={`text-sm font-medium transition-colors ${
+            className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:text-white"
                 : "text-slate-600 hover:text-slate-950"
             }`}
           >
+            <FolderKanban className="h-4 w-4" aria-hidden="true" />
             {t.nav.projects}
           </a>
 
           <Link
             to="/about"
-            className={`text-sm font-medium transition-colors ${
+            className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:text-white"
                 : "text-slate-600 hover:text-slate-950"
             }`}
           >
+            <UserRound className="h-4 w-4" aria-hidden="true" />
             {t.nav.about}
           </Link>
 
           <Link
             to="/contact"
-            className={`text-sm font-medium transition-colors ${
+            className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:text-white"
                 : "text-slate-600 hover:text-slate-950"
             }`}
           >
+            <Mail className="h-4 w-4" aria-hidden="true" />
             {t.nav.contact}
           </Link>
         </nav>
@@ -105,29 +109,9 @@ export function Header() {
             aria-controls="mobile-navigation"
           >
             {isMenuOpen ? (
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path d="M6 6l12 12M18 6 6 18" />
-              </svg>
+              <X className="h-5 w-5" aria-hidden="true" />
             ) : (
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path d="M4 7h16M4 12h16M4 17h16" />
-              </svg>
+              <Menu className="h-5 w-5" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -150,36 +134,39 @@ export function Header() {
           <a
             href="/#projects"
             onClick={closeMenu}
-            className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:bg-slate-800 hover:text-white"
                 : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
             }`}
           >
+            <FolderKanban className="h-4 w-4" aria-hidden="true" />
             {t.nav.projects}
           </a>
 
           <Link
             to="/about"
             onClick={closeMenu}
-            className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:bg-slate-800 hover:text-white"
                 : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
             }`}
           >
+            <UserRound className="h-4 w-4" aria-hidden="true" />
             {t.nav.about}
           </Link>
 
           <Link
             to="/contact"
             onClick={closeMenu}
-            className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+            className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:bg-slate-800 hover:text-white"
                 : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
             }`}
           >
+            <Mail className="h-4 w-4" aria-hidden="true" />
             {t.nav.contact}
           </Link>
         </nav>
