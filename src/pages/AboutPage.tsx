@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+import { PageHero } from "../components/ui/PageHero";
+
+import { siteConfig } from "../config/siteConfig";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 
@@ -18,31 +21,11 @@ export function AboutPage() {
   return (
     <main>
       {/* Hero */}
-      <section
-        className={`px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32 ${
-          isDark
-            ? "bg-gradient-to-b from-slate-900/70 to-slate-950"
-            : "bg-gradient-to-b from-white to-slate-100/80"
-        }`}
-      >
-        <div className="mx-auto max-w-7xl 2xl:max-w-[1600px]">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-500 sm:text-sm sm:tracking-[0.25em] dark:text-blue-400">
-            {t.aboutPage.eyebrow}
-          </p>
-
-          <h1 className="mt-5 max-w-5xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl 2xl:text-7xl">
-            {t.aboutPage.title}
-          </h1>
-
-          <p
-            className={`mt-8 max-w-3xl text-lg leading-8 sm:text-xl sm:leading-9 ${
-              isDark ? "text-slate-300" : "text-slate-600"
-            }`}
-          >
-            {t.aboutPage.description}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t.aboutPage.eyebrow}
+        title={t.aboutPage.title}
+        description={t.aboutPage.description}
+      />
 
       {/* What we do */}
       <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
@@ -126,8 +109,8 @@ export function AboutPage() {
             }`}
           >
             <img
-              src="/images/brand/founder.jpg"
-              alt="jTech"
+              src={siteConfig.founderImage}
+              alt={siteConfig.founderName}
               className="h-full w-full object-cover"
             />
           </div>
@@ -138,7 +121,7 @@ export function AboutPage() {
             </p>
 
             <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-              jTech
+              {siteConfig.founderName}
             </h2>
 
             <p

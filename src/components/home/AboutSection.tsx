@@ -1,8 +1,9 @@
+import { siteConfig } from "../../config/siteConfig";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 
 export function AboutSection() {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
   const { theme } = useTheme();
 
   const isDark = theme === "dark";
@@ -22,47 +23,15 @@ export function AboutSection() {
         >
           <div className="grid md:grid-cols-[0.85fr_1.15fr]">
             <div
-              className={`relative flex min-h-[280px] items-center justify-center border-b sm:min-h-[340px] md:min-h-[480px] md:border-b-0 md:border-r lg:min-h-[560px] ${
-                isDark
-                  ? "border-slate-800 bg-slate-900"
-                  : "border-slate-200 bg-slate-100"
+              className={`relative min-h-[280px] overflow-hidden border-b sm:min-h-[340px] md:min-h-[480px] md:border-b-0 md:border-r lg:min-h-[560px] ${
+                isDark ? "border-slate-800" : "border-slate-200"
               }`}
             >
-              <div className="px-6 text-center sm:px-8">
-                <div
-                  className={`mx-auto flex h-20 w-20 items-center justify-center rounded-full border sm:h-24 sm:w-24 ${
-                    isDark
-                      ? "border-slate-700 bg-slate-800"
-                      : "border-slate-300 bg-white"
-                  }`}
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    className={
-                      isDark
-                        ? "h-8 w-8 text-slate-500 sm:h-10 sm:w-10"
-                        : "h-8 w-8 text-slate-400 sm:h-10 sm:w-10"
-                    }
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="8" r="4" />
-                    <path d="M4 21a8 8 0 0 1 16 0" />
-                  </svg>
-                </div>
-
-                <p
-                  className={`mt-6 text-sm font-medium ${
-                    isDark ? "text-slate-500" : "text-slate-400"
-                  }`}
-                >
-                  {language === "en"
-                    ? "Founder photo coming soon"
-                    : "Foto del fundador próximamente"}
-                </p>
-              </div>
+              <img
+                src={siteConfig.founderImage}
+                alt={siteConfig.founderName}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
             </div>
 
             <div className="flex items-center p-6 sm:p-10 md:p-8 lg:p-16">
@@ -88,12 +57,12 @@ export function AboutSection() {
                     isDark ? "border-slate-800" : "border-slate-200"
                   }`}
                 >
-                  <p className="text-lg font-semibold">jTech</p>
+                  <p className="text-lg font-semibold">
+                    {siteConfig.founderName}
+                  </p>
 
                   <p className="mt-1 text-sm font-semibold text-blue-500 dark:text-blue-400">
-                    {language === "en"
-                      ? "Founder & Software Developer"
-                      : "Fundador y Desarrollador de Software"}
+                    {t.about.founderRole}
                   </p>
 
                   <p
@@ -101,9 +70,7 @@ export function AboutSection() {
                       isDark ? "text-slate-400" : "text-slate-600"
                     }`}
                   >
-                    {language === "en"
-                      ? "Building focused digital products across mobile, web, SaaS, and new software experiences."
-                      : "Creando productos digitales enfocados en aplicaciones móviles, web, SaaS y nuevas experiencias de software."}
+                    {t.about.founderDescription}
                   </p>
                 </div>
               </div>

@@ -30,6 +30,9 @@ export const es = {
     title: "Software bien pensado. Experiencias enfocadas.",
     description:
       "Jotek Systems es un estudio de software independiente enfocado en crear productos digitales prácticos y bien diseñados.",
+    founderRole: "Fundador y Desarrollador de Software",
+    founderDescription:
+      "Creando productos digitales enfocados en aplicaciones móviles, web, SaaS y nuevas experiencias de software.",
   },
 
   aboutPage: {
@@ -70,9 +73,9 @@ export const es = {
 
     founder: {
       eyebrow: "Fundador y desarrollador",
-      title: "Desarrollado independientemente por jTech.",
+      title: "Desarrollado independientemente por Joel Santos.",
       description:
-        "Jotek Systems es un estudio de software independiente creado y desarrollado por jTech, enfocado en construir productos útiles para plataformas móviles, web y tecnologías emergentes.",
+        "Jotek Systems es un estudio de software independiente creado y desarrollado por Joel Santos, enfocado en construir productos útiles para plataformas móviles, web y tecnologías emergentes.",
       exploreProjects: "Explorar nuestros proyectos",
     },
   },

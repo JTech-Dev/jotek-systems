@@ -1,6 +1,9 @@
 import { siteConfig } from "../config/siteConfig";
+
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+
+import { PageHero } from "../components/ui/PageHero";
 
 export function ContactPage() {
   const { t } = useLanguage();
@@ -11,31 +14,11 @@ export function ContactPage() {
   return (
     <main>
       {/* Hero */}
-      <section
-        className={`px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32 ${
-          isDark
-            ? "bg-gradient-to-b from-slate-900/70 to-slate-950"
-            : "bg-gradient-to-b from-white to-slate-100/80"
-        }`}
-      >
-        <div className="mx-auto max-w-7xl 2xl:max-w-[1600px]">
-          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-blue-500 dark:text-blue-400">
-            {t.contactPage.eyebrow}
-          </p>
-
-          <h1 className="mt-5 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl 2xl:text-7xl">
-            {t.contactPage.title}
-          </h1>
-
-          <p
-            className={`mt-6 max-w-2xl text-base leading-8 sm:text-lg 2xl:max-w-3xl 2xl:text-xl ${
-              isDark ? "text-slate-300" : "text-slate-600"
-            }`}
-          >
-            {t.contactPage.description}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow={t.contactPage.eyebrow}
+        title={t.contactPage.title}
+        description={t.contactPage.description}
+      />
 
       {/* Contact */}
       <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32">

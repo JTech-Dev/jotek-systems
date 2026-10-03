@@ -9,18 +9,18 @@ export function HeroSection() {
   const isDark = theme === "dark";
 
   return (
-    <section className="mx-auto flex min-h-[calc(100svh-88px)] max-w-7xl items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="max-w-4xl">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-blue-500 sm:mb-5 sm:text-sm sm:tracking-[0.25em] dark:text-blue-400">
+    <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px]">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-500 sm:text-sm sm:tracking-[0.25em] dark:text-blue-400">
           {t.hero.eyebrow}
         </p>
 
-        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+        <h1 className="mt-5 max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl 2xl:text-7xl">
           {t.hero.title}
         </h1>
 
         <p
-          className={`mt-6 max-w-2xl text-base leading-7 sm:mt-7 sm:text-xl sm:leading-8 ${
+          className={`mt-8 max-w-3xl text-lg leading-8 sm:text-xl sm:leading-9 ${
             isDark ? "text-slate-300" : "text-slate-600"
           }`}
         >
