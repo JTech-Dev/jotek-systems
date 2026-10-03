@@ -42,19 +42,8 @@ export function Footer() {
             className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-7 sm:gap-y-3"
             aria-label="Footer navigation"
           >
-            <a
-              href="/#projects"
-              className={`text-sm font-medium transition-colors ${
-                isDark
-                  ? "text-slate-400 hover:text-white"
-                  : "text-slate-600 hover:text-slate-950"
-              }`}
-            >
-              {t.footer.projects}
-            </a>
-
-            <a
-              href="/#about"
+            <Link
+              to="/about"
               className={`text-sm font-medium transition-colors ${
                 isDark
                   ? "text-slate-400 hover:text-white"
@@ -62,10 +51,10 @@ export function Footer() {
               }`}
             >
               {t.footer.about}
-            </a>
+            </Link>
 
-            <a
-              href="/#contact"
+            <Link
+              to="/contact"
               className={`text-sm font-medium transition-colors ${
                 isDark
                   ? "text-slate-400 hover:text-white"
@@ -73,7 +62,7 @@ export function Footer() {
               }`}
             >
               {t.footer.contact}
-            </a>
+            </Link>
           </nav>
 
           <div className="flex items-center gap-3 self-start md:self-auto">

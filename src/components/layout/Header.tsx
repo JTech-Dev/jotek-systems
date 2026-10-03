@@ -76,8 +76,8 @@ export function Header() {
             {t.nav.about}
           </Link>
 
-          <a
-            href="/#contact"
+          <Link
+            to="/contact"
             className={`text-sm font-medium transition-colors ${
               isDark
                 ? "text-slate-300 hover:text-white"
@@ -85,7 +85,7 @@ export function Header() {
             }`}
           >
             {t.nav.contact}
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -171,8 +171,8 @@ export function Header() {
             {t.nav.about}
           </Link>
 
-          <a
-            href="/#contact"
+          <Link
+            to="/contact"
             onClick={closeMenu}
             className={`rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
               isDark
@@ -181,7 +181,7 @@ export function Header() {
             }`}
           >
             {t.nav.contact}
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
