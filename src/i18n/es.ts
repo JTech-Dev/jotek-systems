@@ -157,6 +157,7 @@ export const es = {
   },
 
   footer: {
+    description: "Estudio de software independiente.",
     projects: "Proyectos",
     about: "Nosotros",
     contact: "Contacto",

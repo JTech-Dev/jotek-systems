@@ -157,6 +157,7 @@ export const en = {
   },
 
   footer: {
+    description: "Independent software studio.",
     projects: "Projects",
     about: "About",
     contact: "Contact",
