@@ -32,12 +32,81 @@ export const es = {
       "Jotek Systems es un estudio de software independiente enfocado en crear productos digitales prácticos y bien diseñados.",
   },
 
+  aboutPage: {
+    eyebrow: "Sobre Jotek Systems",
+    title: "Software independiente, creado con propósito.",
+    description:
+      "Jotek Systems es un estudio de software independiente enfocado en crear productos digitales prácticos y bien diseñados.",
+
+    whatWeDo: {
+      eyebrow: "Lo que hacemos",
+      title: "Productos enfocados en necesidades reales.",
+      description:
+        "Creamos software con un propósito claro: resolver problemas útiles sin complejidad innecesaria.",
+    },
+
+    philosophy: {
+      eyebrow: "Cómo construimos",
+      title: "Principios simples detrás de cada proyecto.",
+
+      purpose: {
+        title: "Propósito antes que complejidad",
+        description:
+          "Cada función debe resolver un problema real o mejorar el producto de forma significativa.",
+      },
+
+      thoughtful: {
+        title: "Experiencias bien pensadas",
+        description:
+          "Cuidamos los detalles que hacen que el software sea claro, intuitivo y agradable de usar.",
+      },
+
+      evolve: {
+        title: "Creado para evolucionar",
+        description:
+          "Nuestros productos están diseñados con espacio para mejorar, expandirse y adaptarse a medida que crecen sus usuarios y necesidades.",
+      },
+    },
+
+    founder: {
+      eyebrow: "Fundador y desarrollador",
+      title: "Desarrollado independientemente por jTech.",
+      description:
+        "Jotek Systems es un estudio de software independiente creado y desarrollado por jTech, enfocado en construir productos útiles para plataformas móviles, web y tecnologías emergentes.",
+      exploreProjects: "Explorar nuestros proyectos",
+    },
+  },
+
   contact: {
     eyebrow: "Contacto",
     title: "Hablemos.",
     description:
       "¿Tienes alguna pregunta sobre uno de nuestros productos o quieres comunicarte con Jotek Systems?",
     emailUs: "Escríbenos",
+  },
+
+  contactPage: {
+    eyebrow: "Contacto",
+    title: "Construyamos algo con propósito.",
+    description:
+      "¿Tienes alguna pregunta sobre Jotek Systems, alguno de nuestros productos o simplemente quieres comunicarte con nosotros? Nos encantaría saber de ti.",
+
+    emailLabel: "Correo electrónico",
+    emailTitle: "Comunícate directamente",
+    emailDescription:
+      "Para preguntas generales, consultas sobre nuestros productos o cualquier tema relacionado con Jotek Systems, envíanos un correo electrónico.",
+
+    button: "Enviar correo",
+    response: "Responderemos tan pronto como sea posible.",
+  },
+
+  projectPage: {
+    notFound: "Proyecto no encontrado.",
+    backToProjects: "Volver a proyectos",
+    aboutProject: "Sobre el proyecto",
+    aboutName: "Sobre {name}",
+    availableOn: "Disponible en",
+    keyFeatures: "Funciones principales",
   },
 
   footer: {

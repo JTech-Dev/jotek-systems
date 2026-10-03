@@ -22,9 +22,7 @@ export function ProjectPage() {
           </p>
 
           <h1 className="mt-4 text-4xl font-bold tracking-tight">
-            {language === "en"
-              ? "Project not found."
-              : "Proyecto no encontrado."}
+            {t.projectPage.notFound}
           </h1>
 
           <Link
@@ -40,6 +38,7 @@ export function ProjectPage() {
 
   return (
     <main>
+      {/* Hero */}
       <section
         className={`px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24 ${
           isDark
@@ -56,7 +55,7 @@ export function ProjectPage() {
                 : "text-slate-500 hover:text-slate-950"
             }`}
           >
-            ← {language === "en" ? "Back to projects" : "Volver a proyectos"}
+            ← {t.projectPage.backToProjects}
           </Link>
 
           <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
@@ -97,6 +96,7 @@ export function ProjectPage() {
         </div>
       </section>
 
+      {/* Screenshots */}
       <section className="px-4 pt-10 pb-20 sm:px-6 sm:pt-12 sm:pb-24 lg:px-8 lg:pt-14 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <ProjectCarousel
@@ -106,18 +106,17 @@ export function ProjectPage() {
         </div>
       </section>
 
+      {/* Project details */}
       <section className="px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-500 sm:text-sm sm:tracking-[0.25em] dark:text-blue-400">
-                {language === "en" ? "About the project" : "Sobre el proyecto"}
+                {t.projectPage.aboutProject}
               </p>
 
               <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                {language === "en"
-                  ? `About ${project.name}`
-                  : `Sobre ${project.name}`}
+                {t.projectPage.aboutName.replace("{name}", project.name)}
               </h2>
 
               <p
@@ -135,7 +134,7 @@ export function ProjectPage() {
                       isDark ? "text-slate-500" : "text-slate-400"
                     }`}
                   >
-                    {language === "en" ? "Available on" : "Disponible en"}
+                    {t.projectPage.availableOn}
                   </p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -159,7 +158,7 @@ export function ProjectPage() {
             {project.features.length > 0 && (
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-blue-500 sm:text-sm sm:tracking-[0.25em] dark:text-blue-400">
-                  {language === "en" ? "Key features" : "Funciones principales"}
+                  {t.projectPage.keyFeatures}
                 </p>
 
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">

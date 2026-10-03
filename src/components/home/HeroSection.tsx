@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -34,8 +35,8 @@ export function HeroSection() {
             {t.hero.exploreProjects}
           </a>
 
-          <a
-            href="#about"
+          <Link
+            to="/about"
             className={`w-full rounded-full border px-6 py-3 text-center text-sm font-semibold transition sm:w-auto ${
               isDark
                 ? "border-slate-700 text-slate-200 hover:border-slate-500 hover:text-white"
@@ -43,7 +44,7 @@ export function HeroSection() {
             }`}
           >
             {t.hero.learnMore}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

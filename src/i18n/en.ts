@@ -40,6 +40,75 @@ export const en = {
     emailUs: "Email us",
   },
 
+  contactPage: {
+    eyebrow: "Contact",
+    title: "Let’s build something meaningful.",
+    description:
+      "Have a question about Jotek Systems, one of our products, or just want to get in touch? We’d be happy to hear from you.",
+
+    emailLabel: "Email",
+    emailTitle: "Get in touch directly",
+    emailDescription:
+      "For general questions, product inquiries, or anything related to Jotek Systems, send us an email.",
+
+    button: "Send an email",
+    response: "We’ll get back to you as soon as possible.",
+  },
+
+  aboutPage: {
+    eyebrow: "About Jotek Systems",
+    title: "Independent software, built with purpose.",
+    description:
+      "Jotek Systems is an independent software studio focused on creating practical, well-designed digital products.",
+
+    whatWeDo: {
+      eyebrow: "What we do",
+      title: "Focused products for real needs.",
+      description:
+        "We build software with a clear purpose: solving useful problems without unnecessary complexity.",
+    },
+
+    philosophy: {
+      eyebrow: "How we build",
+      title: "Simple principles behind every project.",
+
+      purpose: {
+        title: "Purpose before complexity",
+        description:
+          "Every feature should solve a real problem or make the product meaningfully better.",
+      },
+
+      thoughtful: {
+        title: "Thoughtful experiences",
+        description:
+          "We care about the details that make software feel clear, intuitive, and enjoyable to use.",
+      },
+
+      evolve: {
+        title: "Built to evolve",
+        description:
+          "Our products are designed with room to improve, expand, and adapt as their users and needs grow.",
+      },
+    },
+
+    founder: {
+      eyebrow: "Founder & developer",
+      title: "Built independently by jTech.",
+      description:
+        "Jotek Systems is an independent software studio created and developed by jTech, with a focus on building useful products across mobile, web, and emerging platforms.",
+      exploreProjects: "Explore our projects",
+    },
+  },
+
+  projectPage: {
+    notFound: "Project not found.",
+    backToProjects: "Back to projects",
+    aboutProject: "About the project",
+    aboutName: "About {name}",
+    availableOn: "Available on",
+    keyFeatures: "Key features",
+  },
+
   footer: {
     projects: "Projects",
     about: "About",
