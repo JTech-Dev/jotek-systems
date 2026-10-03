@@ -13,7 +13,7 @@ export function ProjectCarousel({
   projectName,
   screenshots,
 }: ProjectCarouselProps) {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
   const { theme } = useTheme();
 
   const isDark = theme === "dark";
@@ -65,20 +65,14 @@ export function ProjectCarousel({
             <path d="m5 17 4.5-4.5 3 3 2-2L19 18" />
           </svg>
 
-          <p className="mt-5 font-semibold">
-            {language === "en"
-              ? "Project screenshots coming soon"
-              : "Capturas del proyecto próximamente"}
-          </p>
+          <p className="mt-5 font-semibold">{t.projectCarousel.comingSoon}</p>
 
           <p
             className={`mt-2 text-sm leading-6 ${
               isDark ? "text-slate-500" : "text-slate-400"
             }`}
           >
-            {language === "en"
-              ? "Screenshots and product previews will appear here."
-              : "Las capturas y vistas previas del producto aparecerán aquí."}
+            {t.projectCarousel.comingSoonDescription}
           </p>
         </div>
       </div>
@@ -124,15 +118,15 @@ export function ProjectCarousel({
             type="button"
             onClick={() => setIsModalOpen(true)}
             className="cursor-zoom-in rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-            aria-label={
-              language === "en"
-                ? `Open ${projectName} screenshot ${currentIndex + 1} in full screen`
-                : `Abrir captura ${currentIndex + 1} de ${projectName} en pantalla completa`
-            }
+            aria-label={t.projectCarousel.openFullscreen
+              .replace("{name}", projectName)
+              .replace("{number}", String(currentIndex + 1))}
           >
             <img
               src={screenshots[currentIndex]}
-              alt={`${projectName} screenshot ${currentIndex + 1}`}
+              alt={t.screenshotModal.screenshotLabel
+                .replace("{name}", projectName)
+                .replace("{number}", String(currentIndex + 1))}
               className="max-h-[520px] max-w-full rounded-2xl object-contain 2xl:max-h-[640px]"
             />
           </button>
@@ -143,9 +137,7 @@ export function ProjectCarousel({
             <button
               type="button"
               onClick={showPrevious}
-              aria-label={
-                language === "en" ? "Previous screenshot" : "Captura anterior"
-              }
+              aria-label={t.screenshotModal.previousScreenshot}
               className={`absolute left-3 top-1/2 flex h-11 w-11 cursor-pointer -translate-y-1/2 items-center justify-center rounded-full border shadow-lg backdrop-blur-xl transition sm:left-5 ${
                 isDark
                   ? "border-slate-700 bg-slate-950/80 text-white hover:bg-slate-800"
@@ -169,9 +161,7 @@ export function ProjectCarousel({
             <button
               type="button"
               onClick={showNext}
-              aria-label={
-                language === "en" ? "Next screenshot" : "Siguiente captura"
-              }
+              aria-label={t.screenshotModal.nextScreenshot}
               className={`absolute right-3 top-1/2 flex h-11 w-11 cursor-pointer -translate-y-1/2 items-center justify-center rounded-full border shadow-lg backdrop-blur-xl transition sm:right-5 ${
                 isDark
                   ? "border-slate-700 bg-slate-950/80 text-white hover:bg-slate-800"
@@ -198,22 +188,17 @@ export function ProjectCarousel({
       {screenshots.length > 1 && (
         <div
           className="mt-5 flex items-center justify-center gap-2"
-          aria-label={
-            language === "en"
-              ? "Screenshot navigation"
-              : "Navegación de capturas"
-          }
+          aria-label={t.projectCarousel.navigation}
         >
           {screenshots.map((_, index) => (
             <button
               key={index}
               type="button"
               onClick={() => setCurrentIndex(index)}
-              aria-label={
-                language === "en"
-                  ? `Show screenshot ${index + 1}`
-                  : `Mostrar captura ${index + 1}`
-              }
+              aria-label={t.projectCarousel.showScreenshot.replace(
+                "{number}",
+                String(index + 1),
+              )}
               aria-current={currentIndex === index ? "true" : undefined}
               className={`h-2.5 cursor-pointer rounded-full transition-all ${
                 currentIndex === index
@@ -232,7 +217,6 @@ export function ProjectCarousel({
         projectName={projectName}
         screenshots={screenshots}
         currentIndex={currentIndex}
-        language={language}
         onClose={() => setIsModalOpen(false)}
         onPrevious={showPrevious}
         onNext={showNext}

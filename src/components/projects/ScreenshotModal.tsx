@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
+import { useLanguage } from "../../context/LanguageContext";
+
 type ScreenshotModalProps = {
   isOpen: boolean;
   projectName: string;
   screenshots: string[];
   currentIndex: number;
-  language: "en" | "es";
   onClose: () => void;
   onPrevious: () => void;
   onNext: () => void;
@@ -17,11 +18,12 @@ export function ScreenshotModal({
   projectName,
   screenshots,
   currentIndex,
-  language,
   onClose,
   onPrevious,
   onNext,
 }: ScreenshotModalProps) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     if (!isOpen) {
       return;
@@ -60,11 +62,7 @@ export function ScreenshotModal({
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={
-        language === "en"
-          ? `${projectName} screenshot preview`
-          : `Vista previa de capturas de ${projectName}`
-      }
+      aria-label={t.screenshotModal.previewLabel.replace("{name}", projectName)}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-3 backdrop-blur-sm sm:p-6"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) {
@@ -75,7 +73,7 @@ export function ScreenshotModal({
       <button
         type="button"
         onClick={onClose}
-        aria-label={language === "en" ? "Close preview" : "Cerrar vista previa"}
+        aria-label={t.screenshotModal.closePreview}
         className="absolute right-4 top-4 z-10 flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-xl transition hover:bg-white/10 sm:right-6 sm:top-6"
       >
         <svg
@@ -97,9 +95,7 @@ export function ScreenshotModal({
         <button
           type="button"
           onClick={onPrevious}
-          aria-label={
-            language === "en" ? "Previous screenshot" : "Captura anterior"
-          }
+          aria-label={t.screenshotModal.previousScreenshot}
           className="absolute left-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-xl transition hover:bg-white/10 sm:left-6"
         >
           <svg
@@ -119,7 +115,9 @@ export function ScreenshotModal({
 
       <img
         src={screenshots[currentIndex]}
-        alt={`${projectName} screenshot ${currentIndex + 1}`}
+        alt={t.screenshotModal.screenshotLabel
+          .replace("{name}", projectName)
+          .replace("{number}", String(currentIndex + 1))}
         className="h-[calc(100%-2rem)] w-[calc(100%-2rem)] object-contain sm:h-[calc(100%-3rem)] sm:w-[calc(100%-3rem)]"
       />
 
@@ -127,9 +125,7 @@ export function ScreenshotModal({
         <button
           type="button"
           onClick={onNext}
-          aria-label={
-            language === "en" ? "Next screenshot" : "Siguiente captura"
-          }
+          aria-label={t.screenshotModal.nextScreenshot}
           className="absolute right-3 top-1/2 z-10 flex h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-xl transition hover:bg-white/10 sm:right-6"
         >
           <svg

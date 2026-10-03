@@ -109,6 +109,22 @@ export const en = {
     keyFeatures: "Key features",
   },
 
+  screenshotModal: {
+    previewLabel: "{name} screenshot preview",
+    closePreview: "Close preview",
+    previousScreenshot: "Previous screenshot",
+    nextScreenshot: "Next screenshot",
+    screenshotLabel: "{name} screenshot {number}",
+  },
+
+  projectCarousel: {
+    comingSoon: "Project screenshots coming soon",
+    comingSoonDescription: "Screenshots and product previews will appear here.",
+    openFullscreen: "Open {name} screenshot {number} in full screen",
+    navigation: "Screenshot navigation",
+    showScreenshot: "Show screenshot {number}",
+  },
+
   footer: {
     projects: "Projects",
     about: "About",
@@ -122,6 +138,12 @@ export const en = {
     changeTheme: "Change theme",
     darkMode: "Dark mode",
     lightMode: "Light mode",
+    companyHome: "home",
+    primaryNavigation: "Primary navigation",
+    mobileNavigation: "Mobile navigation",
+    footerNavigation: "Footer navigation",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
 } as const;
 

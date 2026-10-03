@@ -24,7 +24,7 @@ export function Footer() {
           <Link
             to="/"
             className="flex items-center gap-3 self-start"
-            aria-label={`${siteConfig.companyName} home`}
+            aria-label={`${siteConfig.companyName} ${t.common.companyHome}`}
           >
             <img
               src="/images/brand/logos/jotek-logo.png"
@@ -40,7 +40,7 @@ export function Footer() {
 
           <nav
             className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-7 sm:gap-y-3"
-            aria-label="Footer navigation"
+            aria-label={t.common.footerNavigation}
           >
             <Link
               to="/about"

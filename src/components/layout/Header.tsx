@@ -32,7 +32,7 @@ export function Header() {
           to="/"
           onClick={closeMenu}
           className="flex shrink-0 items-center gap-3"
-          aria-label={`${siteConfig.companyName} home`}
+          aria-label={`${siteConfig.companyName} ${t.common.companyHome}`}
         >
           <img
             src="/images/brand/logos/jotek-logo.png"
@@ -52,7 +52,7 @@ export function Header() {
 
         <nav
           className="hidden items-center gap-8 md:flex"
-          aria-label="Primary navigation"
+          aria-label={t.common.primaryNavigation}
         >
           <a
             href="/#projects"
@@ -100,7 +100,7 @@ export function Header() {
                 ? "border-slate-700 bg-slate-900/70 text-slate-300 hover:text-white"
                 : "border-slate-300 bg-white/70 text-slate-600 hover:text-slate-950"
             }`}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? t.common.closeMenu : t.common.openMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
@@ -145,7 +145,7 @@ export function Header() {
               ? "border-slate-800 bg-slate-900/95"
               : "border-slate-200 bg-white/95"
           }`}
-          aria-label="Mobile navigation"
+          aria-label={t.common.mobileNavigation}
         >
           <a
             href="/#projects"

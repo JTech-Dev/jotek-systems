@@ -109,6 +109,23 @@ export const es = {
     keyFeatures: "Funciones principales",
   },
 
+  screenshotModal: {
+    previewLabel: "Vista previa de capturas de {name}",
+    closePreview: "Cerrar vista previa",
+    previousScreenshot: "Captura anterior",
+    nextScreenshot: "Siguiente captura",
+    screenshotLabel: "Captura {number} de {name}",
+  },
+
+  projectCarousel: {
+    comingSoon: "Capturas del proyecto próximamente",
+    comingSoonDescription:
+      "Las capturas y vistas previas del producto aparecerán aquí.",
+    openFullscreen: "Abrir captura {number} de {name} en pantalla completa",
+    navigation: "Navegación de capturas",
+    showScreenshot: "Mostrar captura {number}",
+  },
+
   footer: {
     projects: "Proyectos",
     about: "Nosotros",
@@ -122,5 +139,11 @@ export const es = {
     changeTheme: "Cambiar tema",
     darkMode: "Modo oscuro",
     lightMode: "Modo claro",
+    companyHome: "inicio",
+    primaryNavigation: "Navegación principal",
+    mobileNavigation: "Navegación móvil",
+    footerNavigation: "Navegación del pie de página",
+    openMenu: "Abrir menú",
+    closeMenu: "Cerrar menú",
   },
 } as const;
