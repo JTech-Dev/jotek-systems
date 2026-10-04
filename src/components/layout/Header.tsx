@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FolderKanban, Mail, Menu, UserRound, X } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  FolderKanban,
+  Mail,
+  Menu,
+  UserRound,
+  X,
+} from "lucide-react";
 
 import { LanguageToggle } from "../ui/LanguageToggle";
 import { ThemeToggle } from "../ui/ThemeToggle";
@@ -65,6 +72,18 @@ export function Header() {
           >
             <FolderKanban className="h-4 w-4" aria-hidden="true" />
             {t.nav.projects}
+          </a>
+
+          <a
+            href="/#services"
+            className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+              isDark
+                ? "text-slate-300 hover:text-white"
+                : "text-slate-600 hover:text-slate-950"
+            }`}
+          >
+            <BriefcaseBusiness className="h-4 w-4" aria-hidden="true" />
+            {t.nav.services}
           </a>
 
           <Link
@@ -142,6 +161,19 @@ export function Header() {
           >
             <FolderKanban className="h-4 w-4" aria-hidden="true" />
             {t.nav.projects}
+          </a>
+
+          <a
+            href="/#services"
+            onClick={closeMenu}
+            className={`flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors ${
+              isDark
+                ? "text-slate-300 hover:bg-slate-800 hover:text-white"
+                : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
+            }`}
+          >
+            <BriefcaseBusiness className="h-4 w-4" aria-hidden="true" />
+            {t.nav.services}
           </a>
 
           <Link

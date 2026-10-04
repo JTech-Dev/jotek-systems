@@ -2,6 +2,7 @@ export const en = {
   nav: {
     home: "Home",
     projects: "Projects",
+    services: "Services",
     about: "About",
     contact: "Contact",
   },
@@ -10,9 +11,9 @@ export const en = {
     eyebrow: "Independent software studio",
     title: "Software built with purpose.",
     description:
-      "We design and build focused digital products that solve real problems with simple, thoughtful experiences.",
+      "Jotek Systems designs and builds focused digital products and custom software solutions that solve real problems with simple, thoughtful experiences.",
     exploreProjects: "Explore our projects",
-    learnMore: "About us",
+    learnMore: "About Jotek",
   },
 
   projects: {
@@ -55,6 +56,36 @@ export const en = {
     },
   },
 
+  services: {
+    eyebrow: "Services",
+    title: "Software built around your ideas.",
+    description:
+      "From an initial idea to a finished product, Jotek Systems builds custom digital solutions tailored to your goals and needs.",
+    items: {
+      customSoftware: {
+        title: "Custom Software",
+        description:
+          "Purpose-built software and digital solutions designed around your business, workflow, or unique project requirements.",
+      },
+      webDevelopment: {
+        title: "Web Development",
+        description:
+          "Modern, responsive websites and web applications built with a focus on performance, usability, and thoughtful design.",
+      },
+      mobileApps: {
+        title: "Mobile Apps",
+        description:
+          "Custom mobile applications designed to deliver polished, intuitive experiences across phones and connected devices.",
+      },
+    },
+    cta: {
+      title: "Have a project in mind?",
+      description:
+        "Tell us what you’re looking to build and we’ll discuss the requirements, scope, and next steps.",
+      button: "Start a project",
+    },
+  },
+
   contact: {
     eyebrow: "Contact",
     title: "Let’s talk.",
@@ -65,15 +96,13 @@ export const en = {
 
   contactPage: {
     eyebrow: "Contact",
-    title: "Let’s build something meaningful.",
+    title: "Let’s build something together.",
     description:
-      "Have a question about Jotek Systems, one of our products, or just want to get in touch? We’d be happy to hear from you.",
-
+      "Have a project in mind? Whether you need a website, mobile app, custom software solution, or have a question about one of our products, we’d be happy to hear from you.",
     emailLabel: "Email",
-    emailTitle: "Get in touch directly",
+    emailTitle: "Tell us about your project.",
     emailDescription:
-      "For general questions, product inquiries, or anything related to Jotek Systems, send us an email.",
-
+      "Share a little about what you’re looking to build, the problem you want to solve, or any questions you have. We’ll get back to you to discuss the next steps.",
     button: "Send an email",
     response: "We’ll get back to you as soon as possible.",
   },
@@ -159,6 +188,7 @@ export const en = {
   footer: {
     description: "Independent software studio.",
     projects: "Projects",
+    services: "Services",
     about: "About",
     contact: "Contact",
     rights: "All rights reserved.",

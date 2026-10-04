@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { ProjectStatusBadge } from "../projects/ProjectStatusBadge";
+import { ProjectLogo } from "../projects/ProjectLogo";
+
 import { projects } from "../../data/projects";
+
 import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext";
 
@@ -46,13 +49,7 @@ export function ProjectsSection() {
                   : "border-slate-200 bg-white hover:border-slate-300 hover:shadow-xl"
               }`}
             >
-              <div className="h-16 w-16 overflow-hidden rounded-2xl">
-                <img
-                  src={project.logo}
-                  alt=""
-                  className="h-full w-full object-contain"
-                />
-              </div>
+              <ProjectLogo src={project.logo} name={project.name} />
 
               <div className="mt-6 sm:mt-8">
                 <div className="flex flex-wrap items-center gap-3">

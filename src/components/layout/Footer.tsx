@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FolderKanban, Mail, UserRound } from "lucide-react";
+import { BriefcaseBusiness, FolderKanban, Mail, UserRound } from "lucide-react";
 
 import { siteConfig } from "../../config/siteConfig";
 import { useLanguage } from "../../context/LanguageContext";
@@ -66,6 +66,18 @@ export function Footer() {
             >
               <FolderKanban className="h-4 w-4" aria-hidden="true" />
               {t.footer.projects}
+            </Link>
+
+            <Link
+              to="/#services"
+              className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                isDark
+                  ? "text-slate-400 hover:text-white"
+                  : "text-slate-600 hover:text-slate-950"
+              }`}
+            >
+              <BriefcaseBusiness className="h-4 w-4" aria-hidden="true" />
+              {t.footer.services}
             </Link>
 
             <Link

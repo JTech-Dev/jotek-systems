@@ -9,6 +9,7 @@ import { useTheme } from "../context/ThemeContext";
 import { ProjectCarousel } from "../components/projects/ProjectCarousel";
 import { ProjectStatusBadge } from "../components/projects/ProjectStatusBadge";
 import { SectionSurface } from "../components/ui/SectionSurface";
+import { ProjectLogo } from "../components/projects/ProjectLogo";
 
 export function ProjectPage() {
   const { projectId } = useParams();
@@ -62,10 +63,10 @@ export function ProjectPage() {
 
             <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div className="max-w-4xl">
-                <img
+                <ProjectLogo
                   src={project.logo}
-                  alt={`${project.name} logo`}
-                  className="h-20 w-20 rounded-2xl object-contain sm:h-24 sm:w-24"
+                  name={project.name}
+                  size="large"
                 />
 
                 <div className="mt-8 flex flex-wrap items-center gap-3">

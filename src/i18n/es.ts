@@ -2,6 +2,7 @@ export const es = {
   nav: {
     home: "Inicio",
     projects: "Proyectos",
+    services: "Servicios",
     about: "Nosotros",
     contact: "Contacto",
   },
@@ -10,9 +11,9 @@ export const es = {
     eyebrow: "Estudio de software independiente",
     title: "Software creado con propósito.",
     description:
-      "Diseñamos y desarrollamos productos digitales enfocados en resolver problemas reales con experiencias simples y bien pensadas.",
-    exploreProjects: "Explorar nuestros proyectos",
-    learnMore: "Sobre nosotros",
+      "Jotek Systems diseña y desarrolla productos digitales y soluciones de software personalizadas que resuelven problemas reales mediante experiencias simples y bien pensadas.",
+    exploreProjects: "Explorar proyectos",
+    learnMore: "Sobre Jotek",
   },
 
   projects: {
@@ -53,6 +54,44 @@ export const es = {
       backend: "Backend y Cloud",
       ai: "IA e Integraciones",
     },
+  },
+
+  services: {
+    eyebrow: "Servicios",
+    title: "Software creado alrededor de tus ideas.",
+    description:
+      "Desde una idea inicial hasta un producto terminado, Jotek Systems desarrolla soluciones digitales personalizadas adaptadas a tus objetivos y necesidades.",
+    items: {
+      customSoftware: {
+        title: "Software personalizado",
+        description:
+          "Software y soluciones digitales creadas a la medida de tu negocio, flujo de trabajo o las necesidades específicas de tu proyecto.",
+      },
+      webDevelopment: {
+        title: "Desarrollo web",
+        description:
+          "Sitios web y aplicaciones web modernas y responsivas, desarrolladas con enfoque en rendimiento, facilidad de uso y un diseño bien pensado.",
+      },
+      mobileApps: {
+        title: "Aplicaciones móviles",
+        description:
+          "Aplicaciones móviles personalizadas diseñadas para ofrecer experiencias pulidas e intuitivas en teléfonos y dispositivos conectados.",
+      },
+    },
+    cta: {
+      title: "¿Tienes un proyecto en mente?",
+      description:
+        "Cuéntanos qué quieres crear y conversaremos sobre los requisitos, el alcance y los próximos pasos.",
+      button: "Iniciar un proyecto",
+    },
+  },
+
+  contact: {
+    eyebrow: "Contacto",
+    title: "Hablemos.",
+    description:
+      "¿Tienes alguna pregunta sobre uno de nuestros productos o quieres comunicarte con Jotek Systems?",
+    emailUs: "Escríbenos",
   },
 
   aboutPage: {
@@ -100,27 +139,17 @@ export const es = {
     },
   },
 
-  contact: {
-    eyebrow: "Contacto",
-    title: "Hablemos.",
-    description:
-      "¿Tienes alguna pregunta sobre uno de nuestros productos o quieres comunicarte con Jotek Systems?",
-    emailUs: "Escríbenos",
-  },
-
   contactPage: {
-    eyebrow: "Contacto",
-    title: "Construyamos algo con propósito.",
+    eyebrow: "Contact",
+    title: "Let’s build something together.",
     description:
-      "¿Tienes alguna pregunta sobre Jotek Systems, alguno de nuestros productos o simplemente quieres comunicarte con nosotros? Nos encantaría saber de ti.",
-
-    emailLabel: "Correo electrónico",
-    emailTitle: "Comunícate directamente",
+      "Have a project in mind? Whether you need a website, mobile app, custom software solution, or have a question about one of our products, we’d be happy to hear from you.",
+    emailLabel: "Email",
+    emailTitle: "Tell us about your project.",
     emailDescription:
-      "Para preguntas generales, consultas sobre nuestros productos o cualquier tema relacionado con Jotek Systems, envíanos un correo electrónico.",
-
-    button: "Enviar correo",
-    response: "Responderemos tan pronto como sea posible.",
+      "Share a little about what you’re looking to build, the problem you want to solve, or any questions you have. We’ll get back to you to discuss the next steps.",
+    button: "Send an email",
+    response: "We’ll get back to you as soon as possible.",
   },
 
   projectPage: {
@@ -159,6 +188,7 @@ export const es = {
   footer: {
     description: "Estudio de software independiente.",
     projects: "Proyectos",
+    services: "Servicios",
     about: "Nosotros",
     contact: "Contacto",
     rights: "Todos los derechos reservados.",
