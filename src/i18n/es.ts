@@ -140,16 +140,16 @@ export const es = {
   },
 
   contactPage: {
-    eyebrow: "Contact",
-    title: "Let’s build something together.",
+    eyebrow: "Contacto",
+    title: "Construyamos algo juntos.",
     description:
-      "Have a project in mind? Whether you need a website, mobile app, custom software solution, or have a question about one of our products, we’d be happy to hear from you.",
-    emailLabel: "Email",
-    emailTitle: "Tell us about your project.",
+      "¿Tienes un proyecto en mente? Ya sea que necesites un sitio web, una aplicación móvil, una solución de software personalizada o tengas alguna pregunta sobre uno de nuestros productos, nos gustaría conocer tu idea.",
+    emailLabel: "Correo electrónico",
+    emailTitle: "Cuéntanos sobre tu proyecto.",
     emailDescription:
-      "Share a little about what you’re looking to build, the problem you want to solve, or any questions you have. We’ll get back to you to discuss the next steps.",
-    button: "Send an email",
-    response: "We’ll get back to you as soon as possible.",
+      "Comparte un poco sobre lo que quieres crear, el problema que deseas resolver o cualquier pregunta que tengas. Nos pondremos en contacto contigo para conversar sobre los próximos pasos.",
+    button: "Enviar un correo",
+    response: "Te responderemos lo antes posible.",
   },
 
   projectPage: {
