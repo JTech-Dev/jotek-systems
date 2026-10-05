@@ -118,7 +118,7 @@ export function ProjectPage() {
 
       {/* Project details */}
       <SectionSurface>
-        <section className="px-4 pb-20 sm:px-6 sm:pb-24 lg:px-8 lg:pb-32">
+        <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div>
