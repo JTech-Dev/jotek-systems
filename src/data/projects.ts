@@ -1,3 +1,5 @@
+import type { ProjectFeatureIcon } from "../components/projects/ProjectFeatureCard";
+
 export type LocalizedText = {
   en: string;
   es: string;
@@ -6,6 +8,7 @@ export type LocalizedText = {
 export type ProjectFeature = {
   title: LocalizedText;
   description: LocalizedText;
+  icon: ProjectFeatureIcon;
 };
 
 export type ProjectStatus = "available" | "beta" | "development" | "comingSoon";
@@ -46,6 +49,7 @@ export const projects: Project[] = [
     platforms: ["iPhone", "Apple Watch"],
     features: [
       {
+        icon: "macros",
         title: {
           en: "Macro tracking",
           es: "Seguimiento de macros",
@@ -56,6 +60,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "utensils",
         title: {
           en: "Food & water logging",
           es: "Registro de alimentos y agua",
@@ -66,6 +71,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "sparkles",
         title: {
           en: "AI food analysis",
           es: "Análisis de alimentos con IA",
@@ -76,6 +82,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "health",
         title: {
           en: "Health insights",
           es: "Datos de salud",
@@ -86,6 +93,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "watch",
         title: {
           en: "Apple Watch experience",
           es: "Experiencia en Apple Watch",
@@ -96,6 +104,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "trophy",
         title: {
           en: "Achievements & progress",
           es: "Logros y progreso",
@@ -135,6 +144,7 @@ export const projects: Project[] = [
     platforms: ["Web"],
     features: [
       {
+        icon: "calendar",
         title: {
           en: "Content planning",
           es: "Planificación de contenido",
@@ -145,6 +155,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "calendar",
         title: {
           en: "Post scheduling",
           es: "Programación de publicaciones",
@@ -155,6 +166,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "share",
         title: {
           en: "Multi-platform workflow",
           es: "Flujo multiplataforma",
@@ -165,6 +177,7 @@ export const projects: Project[] = [
         },
       },
       {
+        icon: "sparkles",
         title: {
           en: "AI-assisted content",
           es: "Contenido asistido por IA",
@@ -172,6 +185,28 @@ export const projects: Project[] = [
         description: {
           en: "Use AI tools to help create and refine social media content.",
           es: "Utiliza herramientas de IA para ayudar a crear y mejorar contenido para redes sociales.",
+        },
+      },
+      {
+        icon: "image",
+        title: {
+          en: "AI image generation",
+          es: "Generación de imágenes con IA",
+        },
+        description: {
+          en: "Generate original images with AI to complement your social media content without leaving Teccio.",
+          es: "Genera imágenes originales con IA para complementar tu contenido de redes sociales sin salir de Teccio.",
+        },
+      },
+      {
+        icon: "sparkles",
+        title: {
+          en: "Generate My Week",
+          es: "Genera Mi Semana",
+        },
+        description: {
+          en: "Generate a complete week of social content to turn weekly planning into a faster, more focused workflow.",
+          es: "Genera una semana completa de contenido para convertir la planificación semanal en un flujo de trabajo más rápido y enfocado.",
         },
       },
     ],

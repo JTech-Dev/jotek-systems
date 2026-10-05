@@ -10,6 +10,7 @@ import { ProjectCarousel } from "../components/projects/ProjectCarousel";
 import { ProjectStatusBadge } from "../components/projects/ProjectStatusBadge";
 import { SectionSurface } from "../components/ui/SectionSurface";
 import { ProjectLogo } from "../components/projects/ProjectLogo";
+import { ProjectFeatureCard } from "../components/projects/ProjectFeatureCard";
 
 export function ProjectPage() {
   const { projectId } = useParams();
@@ -174,26 +175,12 @@ export function ProjectPage() {
 
                   <div className="mt-6 grid gap-4 sm:grid-cols-2">
                     {project.features.map((feature) => (
-                      <article
+                      <ProjectFeatureCard
                         key={feature.title.en}
-                        className={`rounded-2xl border p-5 sm:p-6 ${
-                          isDark
-                            ? "border-slate-800 bg-slate-900/50"
-                            : "border-slate-200 bg-white"
-                        }`}
-                      >
-                        <h3 className="font-semibold">
-                          {feature.title[language]}
-                        </h3>
-
-                        <p
-                          className={`mt-2 text-sm leading-6 ${
-                            isDark ? "text-slate-400" : "text-slate-600"
-                          }`}
-                        >
-                          {feature.description[language]}
-                        </p>
-                      </article>
+                        title={feature.title[language]}
+                        description={feature.description[language]}
+                        icon={feature.icon}
+                      />
                     ))}
                   </div>
                 </div>
