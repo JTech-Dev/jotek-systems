@@ -225,22 +225,106 @@ export const projects: Project[] = [
     id: "dinage",
     name: "Dinage",
     status: "development",
+
     shortDescription: {
-      en: "A new Jotek Systems project in development.",
-      es: "Un nuevo proyecto de Jotek Systems en desarrollo.",
+      en: "Your content. Every screen. All under control.",
+      es: "Tu contenido. Cada pantalla. Todo bajo control.",
     },
+
     description: {
-      en: "Dinage is currently in development. More details will be shared as the project evolves.",
-      es: "Dinage se encuentra actualmente en desarrollo. Compartiremos más detalles a medida que el proyecto evolucione.",
+      en: "A digital signage platform for organizing content, building playlists, scheduling media, and managing screens from one centralized workspace.",
+      es: "Una plataforma de señalización digital para organizar contenido, crear listas de reproducción, programar contenido multimedia y administrar pantallas desde un espacio de trabajo centralizado.",
     },
+
     about: {
-      en: "Dinage is an upcoming Jotek Systems project. Its product details will be shared as development progresses.",
-      es: "Dinage es un próximo proyecto de Jotek Systems. Sus detalles se compartirán a medida que avance el desarrollo.",
+      en: "Dinage simplifies digital signage management by bringing content organization, playlist creation, scheduling, and screen management into one platform. Designed to make managing digital displays easier, whether you're working with one screen or multiple locations.",
+      es: "Dinage simplifica la administración de señalización digital al reunir la organización de contenido, creación de listas de reproducción, programación y gestión de pantallas en una sola plataforma. Diseñado para facilitar el manejo de pantallas digitales, ya sea una sola pantalla o múltiples ubicaciones.",
     },
+
     website: "https://dinage.app",
+
     logo: "/images/projects/dinage/dinage-logo.png",
-    platforms: [],
-    features: [],
-    screenshots: [],
+
+    platforms: ["Web"],
+
+    features: [
+      {
+        icon: "dashboard",
+        title: {
+          en: "Centralized screen management",
+          es: "Administración centralizada de pantallas",
+        },
+        description: {
+          en: "Organize and manage your digital displays from one centralized workspace.",
+          es: "Organiza y administra tus pantallas digitales desde un espacio de trabajo centralizado.",
+        },
+      },
+      {
+        icon: "image",
+        title: {
+          en: "Content management",
+          es: "Gestión de contenido",
+        },
+        description: {
+          en: "Keep your digital signage content organized and ready to display.",
+          es: "Mantén organizado tu contenido de señalización digital y listo para mostrar.",
+        },
+      },
+      {
+        icon: "calendar",
+        title: {
+          en: "Content scheduling",
+          es: "Programación de contenido",
+        },
+        description: {
+          en: "Schedule content to control what appears on your screens and when.",
+          es: "Programa contenido para controlar qué aparece en tus pantallas y cuándo.",
+        },
+      },
+      {
+        icon: "share",
+        title: {
+          en: "Playlist management",
+          es: "Administración de listas de reproducción",
+        },
+        description: {
+          en: "Build and organize playlists to manage the content displayed across your screens.",
+          es: "Crea y organiza listas de reproducción para administrar el contenido que aparece en tus pantallas.",
+        },
+      },
+      {
+        icon: "cloud",
+        title: {
+          en: "Remote management",
+          es: "Administración remota",
+        },
+        description: {
+          en: "Manage your digital signage content and screens from anywhere.",
+          es: "Administra el contenido y las pantallas de tu señalización digital desde cualquier lugar.",
+        },
+      },
+      {
+        icon: "sparkles",
+        title: {
+          en: "Dina AI — Context-aware assistant",
+          es: "Dina AI — Asistente con contexto",
+        },
+        description: {
+          en: "Ask Dina questions about Dinage features or your current workspace. With page-aware context, she can answer questions about your screens, including how many you have and which are offline.",
+          es: "Hazle preguntas a Dina sobre las funciones de Dinage o tu espacio de trabajo actual. Con contexto de la página, puede responder cuántas pantallas tienes y cuáles están desconectadas.",
+        },
+      },
+    ],
+
+    screenshots: [
+      "/images/projects/dinage/dinage-screens.png",
+      "/images/projects/dinage/dinage-studio.png",
+      "/images/projects/dinage/dinage-dina.png",
+      "/images/projects/dinage/dinage-playlists.png",
+      "/images/projects/dinage/dinage-playlist-items.png",
+      "/images/projects/dinage/dinage-media.png",
+      "/images/projects/dinage/dinage-image-generator.png",
+      "/images/projects/dinage/dinage-landing.png",
+    ],
   },
 ];
