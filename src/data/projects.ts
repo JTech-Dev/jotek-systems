@@ -126,7 +126,7 @@ export const projects: Project[] = [
   {
     id: "teccio",
     name: "Teccio",
-    status: "available",
+    status: "beta",
     shortDescription: {
       en: "Plan once. Publish all week.",
       es: "Planifica una vez. Publica toda la semana.",
